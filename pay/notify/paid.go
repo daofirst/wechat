@@ -43,12 +43,15 @@ type PaidResult struct {
 	CouponType0 *string `xml:"coupon_type_0"`
 	CouponType1 *string `xml:"coupon_type_1"`
 	CouponType2 *string `xml:"coupon_type_2"`
+	CouponType3 *string `xml:"coupon_type_3"`
 	CouponID0   *string `xml:"coupon_id_0"`
 	CouponID1   *string `xml:"coupon_id_1"`
 	CouponID2   *string `xml:"coupon_id_2"`
+	CouponID3   *string `xml:"coupon_id_3"`
 	CouponFeed0 *string `xml:"coupon_fee_0"`
 	CouponFeed1 *string `xml:"coupon_fee_1"`
 	CouponFeed2 *string `xml:"coupon_fee_2"`
+	CouponFeed3 *string `xml:"coupon_fee_3"`
 
 	TransactionID *string `xml:"transaction_id"`
 	OutTradeNo    *string `xml:"out_trade_no"`

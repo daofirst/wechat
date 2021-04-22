@@ -43,6 +43,7 @@ type Params struct {
 	GoodsTag   string
 	NotifyURL  string
 	SceneInfo  string
+	TimeExpire string
 }
 
 // Config 是传出用于 js sdk 用的参数
@@ -165,6 +166,7 @@ func (o *Order) PrePayOrder(p *Params) (payOrder PreOrder, err error) {
 	param["goods_tag"] = p.GoodsTag
 	param["notify_url"] = notifyURL
 	param["scene_info"] = p.SceneInfo
+	param["time_expire"] = p.TimeExpire
 
 	sign, err := util.ParamSign(param, o.Key)
 	if err != nil {
@@ -187,6 +189,7 @@ func (o *Order) PrePayOrder(p *Params) (payOrder PreOrder, err error) {
 		Attach:         p.Attach,
 		GoodsTag:       p.GoodsTag,
 		SceneInfo:      p.SceneInfo,
+		TimeExpire: p.TimeExpire,
 	}
 	rawRet, err := util.PostXML(payGateway, request)
 	if err != nil {
